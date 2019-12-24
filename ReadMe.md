@@ -119,6 +119,8 @@ BluetoothPrintManager.getInstance()
                     #if( $printBean.remark )
                     <B>备注：$printBean.remark</B>
                     #end
+                    
+### $row.format 模板工具说明：第一个参数为追加字符，传“”即可；从第二个参数开始，每4个一组代表一列，一种依次为：1、显示的文本，2、列宽每行中所有列宽相加之和需要等于 32（58小票） 或 48（80小票），3、padding，4、对齐方式 left center right;默认left
 
 # 标签说明
  <BR> ：换行符
