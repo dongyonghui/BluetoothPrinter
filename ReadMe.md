@@ -1,5 +1,6 @@
-![效果图](https://image.goukugogo.com/2019122411100905061b6bdf5)
-![效果图](https://image.goukugogo.com/201912241110284025adc9802)
+![效果图1](https://image.goukugogo.com/2019122411100905061b6bdf5)
+
+![效果图2](https://image.goukugogo.com/201912241110284025adc9802)
 # gradle引入方法
 Add it in your root build.gradle at the end of repositories:
 
@@ -98,7 +99,7 @@ BluetoothPrintManager.getInstance()
 ```
 
 #模板样例：
-                    <CB>DW国际饭店</CB>
+                    ```<CB>DW国际饭店</CB>
                     #if( $printBean.orderNumber )
                     $row.format("","取餐码: ","8","0","left", $printBean.orderNumber, "24","0","left")
                     #end
@@ -118,12 +119,13 @@ BluetoothPrintManager.getInstance()
                     #end
                     #if( $printBean.remark )
                     <B>备注：$printBean.remark</B>
-                    #end
+                    #end```
                     
-### $row.format 模板工具说明：第一个参数为追加字符，传“”即可；从第二个参数开始，每4个一组代表一列，一种依次为：1、显示的文本，2、列宽每行中所有列宽相加之和需要等于 32（58小票） 或 48（80小票），3、padding，4、对齐方式 left center right;默认left
+### $row.format 模板工具说明：
+第一个参数为追加字符，传“”即可；从第二个参数开始，每4个一组代表一列，一种依次为：1、显示的文本，2、列宽每行中所有列宽相加之和需要等于 32（58小票） 或 48（80小票），3、padding，4、对齐方式 left center right;默认left
 
 # 标签说明
- <BR> ：换行符
+ ```<BR> ：换行符
  <CUT> ：切刀指令(主动切纸,仅限切刀打印机使用才有效果) 
  <PLUGIN> ：钱箱或者外置音响指令
  <CB></CB>：居中放大
@@ -139,4 +141,4 @@ BluetoothPrintManager.getInstance()
  列标签属性说明：
  weight：列宽，每行中所有列宽相加之和需要等于 32（58小票） 或 48（80小票）
 gravity：对齐方式 left center right;默认left
-padding: 边距
+padding: 边距```
