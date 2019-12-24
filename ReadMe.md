@@ -1,6 +1,7 @@
-![效果图1](https://image.goukugogo.com/2019122411100905061b6bdf5)
+![小票](https://image.goukugogo.com/2019122411100905061b6bdf5)
 
-![效果图2](https://image.goukugogo.com/201912241110284025adc9802)
+![设置](https://image.goukugogo.com/201912241110284025adc9802)
+
 # gradle引入方法
 Add it in your root build.gradle at the end of repositories:
 
