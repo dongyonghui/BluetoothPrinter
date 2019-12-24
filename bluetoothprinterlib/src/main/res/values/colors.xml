@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="printer_titleBgColor">#F44336</color>
+    <color name="printer_titleColorPressed">#BA352C</color>
+</resources>

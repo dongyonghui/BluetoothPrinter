@@ -1,0 +1,21 @@
+<CB>DW国际饭店</CB>
+#if( $printBean.orderNumber )
+$row.format("","取餐码: ","8","0","0", $printBean.orderNumber, "40","0","2")
+#end
+#if( $printBean.skuList )
+------------------------------------------------
+商品信息：
+#foreach( $itemBean in $printBean.skuList)
+#set( $countInfo ="X$itemBean.skuCount" )
+<B>$row.format("",$itemBean.skuName,"20","0","0", $countInfo, "4","0","2")</B>
+#end
+#end
+------------------------------------------------
+顾客信息：
+<L>$row.format("",$printBean.userName,"32","0","0", $printBean.userPhone, "16","0","2")</L>
+#if( $printBean.userAddress )
+$printBean.userAddress
+#end
+#if( $printBean.remark )
+<B>$printBean.remark</B>
+#end

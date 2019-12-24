@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BluetoothPrinterLib</string>
+    <string name="printer_bindAlready">已绑定</string>
+    <string name="printer_bindSuccess2AppInfo">打印机已绑定，退出设置页面开始使用</string>
+    <string name="printer_notBind">未绑定</string>
+    <string name="printer_user80Width">使用80小票(默认使用58小票)</string>
+    <string name="printer_printCount">打印联数</string>
+    <string name="printer_bindPrinter">绑定蓝牙打印机</string>
+    <string name="printer_printTest">打印测试页</string>
+    <string name="printer_countDefault">1</string>
+    <string name="printer_save">保存</string>
+    <string name="printer_back">返回</string>
+    <string name="printer_printing">正在打印</string>
+    <string name="printer_printFailed">打印失败</string>
+</resources>

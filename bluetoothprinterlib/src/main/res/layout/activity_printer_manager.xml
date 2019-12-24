@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.PrinterManagerActivity">
+
+    <RelativeLayout
+        android:id="@+id/mTitleRootView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/printer_titleBgColor">
+
+        <TextView
+            android:id="@+id/mBackTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/printer_button_title"
+            android:clickable="true"
+            android:drawableLeft="@drawable/back_white"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:onClick="back"
+            android:padding="10dp"
+            android:text="@string/printer_back"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="打印机管理"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/mSaveTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/printer_button_title"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="save"
+            android:padding="10dp"
+            android:text="@string/printer_save"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mBottomButtonViews"
+        android:layout_below="@+id/mTitleRootView"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/img_printer" />
+
+        <TextView
+            android:id="@+id/mPrinterNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/mStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#8BC34A"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/printer_user80Width"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/mUse80WidthCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:checked="false" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:background="#D8D8D8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/printer_printCount"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/mPrintCountEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/printer_printCount"
+                android:inputType="numberSigned"
+                android:maxLength="3"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="@string/printer_countDefault"
+                android:textColor="#616161"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mBottomButtonViews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/mSettingMyselfTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/printer_button_default"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="connectDevice"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            android:text="@string/printer_bindPrinter"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:background="#D8D8D8" />
+
+        <TextView
+            android:id="@+id/mPrintTestTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/printer_button_default"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="printTest"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            android:text="@string/printer_printTest"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
