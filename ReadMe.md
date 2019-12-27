@@ -145,4 +145,83 @@ $printBean.userAddress
  列标签属性说明：
  weight：列宽，每行中所有列宽相加之和需要等于 32（58小票） 或 48（80小票）
 gravity：对齐方式 left center right;默认left
-padding: 边距```
+padding: 边距
+```
+
+# BluetoothPrintManager 其他API方法说明
+```
+    /**
+      * 打印消息
+      *
+      * @param context
+      * @param printerBean 获取方法见demo和 getPrinterBean()方法
+      * @return
+      */
+     public BluetoothPrintManager print(final Context context, final PrinterBean printerBean)
+    /**
+     * 生成小票信息数据
+     *
+     * @param context               上下文
+     * @param assesTemplateFileName assess文件夹中小票模板文件名
+     * @param templateRootKeyName   小票模板中自定义数据key
+     * @param data                  展示的数据
+     * @return
+     */
+    public PrinterBean getPrinterBean(Context context, String assesTemplateFileName, String templateRootKeyName, Object data)
+    
+     /**
+     * 生成小票信息数据
+     *
+     * @param context               上下文
+     * @param assesTemplateFileName assess文件夹中小票模板文件名
+     * @param templateRootKeyName   小票模板中自定义数据key
+     * @param data                  展示的数据
+     * @param count                 打印数量
+     * @return
+     */
+    public PrinterBean getPrinterBean(Context context, String assesTemplateFileName, String templateRootKeyName, Object data, int count)
+    
+    
+ /**
+     * 获取打印机配置信息
+     *
+     * @param context
+     * @return
+     */
+    public PrinterConfig getPrinterConfig(Context context)
+
+ /**
+     * 保存打印机配置信息
+     *
+     * @param context
+     * @param printerConfig
+     * @return
+     */
+    public BluetoothPrintManager saveConfigInfo(Context context, PrinterConfig printerConfig) 
+
+/**
+     * 检查是否已经绑定打印机<BR>
+     * 本地缓存的已经绑定过的设备名称和地址与当前手机绑定设备列表遍历对比
+     *
+     * @param mContext
+     * @return true 表示绑定了打印机 否则表示没有绑定打印机
+     */
+    //是否绑定了打印机设备
+    public boolean isBondedPrinter(Context mContext) 
+/**
+     * 是否需要弹框提示正在打印
+     *
+     * @param activity
+     * @param needShowPrintingDialog
+     * @return
+     */
+    public BluetoothPrintManager setNeedShowPrintingDialog(Activity activity, boolean needShowPrintingDialog)
+/**
+     * 设置通知回调监听器
+     *
+     * @param onPrinterNotifyListener 需要监听的监听器对象
+     * @return
+     */
+    public BluetoothPrintManager setOnPrinterNotifyListener(OnPrinterNotifyListener onPrinterNotifyListener) 
+
+```

@@ -3,7 +3,7 @@ package cn.vip.dw.bluetoothprinterlib.velocity;
 import java.io.Serializable;
 
 /**
- * User: DongYonghui(404638723@qq.com)
+ * User: DongYonghui(648731994@qq.com)
  * Date: 2016-01-03
  * Time: 20:31
  * 打印小票

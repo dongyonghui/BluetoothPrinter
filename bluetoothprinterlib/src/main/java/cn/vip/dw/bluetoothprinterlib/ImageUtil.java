@@ -21,7 +21,7 @@ import cn.vip.dw.bluetoothprinterlib.zxing.qrcode.QRCodeWriter;
 import java.util.Hashtable;
 
 /**
- * User: DongYonghui(404638723@qq.com)
+ * User: DongYonghui(648731994@qq.com)
  * Date: 2015-11-17
  * Time: 10:16
  */

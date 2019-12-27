@@ -32,7 +32,7 @@ import cn.vip.dw.bluetoothprinterlib.velocity.RowTool;
 import cn.vip.dw.bluetoothprinterlib.velocity.VelocityContentRender;
 
 /**
- * User: DongYonghui(404638723@qq.com)
+ * User: DongYonghui(648731994@qq.com)
  * Date: 2015-12-26
  * Time: 15:05
  * 对外开放的蓝牙打印机管理类
@@ -131,11 +131,24 @@ public class BluetoothPrintManager {
         return onPrinterNotifyListener;
     }
 
+    /**
+     * 设置通知回调监听器
+     *
+     * @param onPrinterNotifyListener 需要监听的监听器对象
+     * @return
+     */
     public BluetoothPrintManager setOnPrinterNotifyListener(OnPrinterNotifyListener onPrinterNotifyListener) {
         this.onPrinterNotifyListener = onPrinterNotifyListener;
         return instance;
     }
 
+    /**
+     * 打印消息
+     *
+     * @param context
+     * @param printerBean 获取方法见demo和 getPrinterBean()方法
+     * @return
+     */
     public BluetoothPrintManager print(final Context context, final PrinterBean printerBean) {
         if (null == printerBean || null == context) {
             sendNotify(OnPrinterNotifyListener.NotifyMessage.PRINT_FAILED_PARAMS_ERROR);

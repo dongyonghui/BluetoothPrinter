@@ -1,7 +1,7 @@
 package cn.vip.dw.bluetoothprinterlib.constants;
 
 /**
- * User: DongYonghui(404638723@qq.com)
+ * User: DongYonghui(648731994@qq.com)
  * Date: 2015-12-27
  * Time: 20:31
  * 模板常量
